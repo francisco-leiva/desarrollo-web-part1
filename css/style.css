@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* GENERAL */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #B3B6B7;
+    width: 100%;
+    min-height: 6rem;
+    display: grid; 
+    grid-template-rows: 70% 30%; 
+    grid-template-areas: 
+    "titulo"
+    "nav"; 
+}
+
+    .logo {
+        display: none;
+        grid-area: logo;
+    }
+
+    .nombreEmpresa {
+        grid-area: titulo;
+        color: white;
+        align-self: center;
+    }
+
+        .nombreEmpresa h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+nav {
+    grid-area: nav;
+    text-align: center;
+    align-self: center;
+}
+
+    nav a {
+        color: #c6825f;
+        font-size: 0.90rem;
+        margin: 0rem 0.15rem;
+    }
+
+.pageSector {
+    grid-area: main;
+}
+
+.nuevaTemporada {
+    width: 95vw;
+    display: block;
+    margin: 0.75rem auto 0;
+}
+
+.sectorGaleria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+    .sectorGaleria img {
+        width: 8rem;
+        margin: 1rem;
+        cursor: pointer;
+    }
+
+footer {
+    grid-area: footer;
+    background-color: #B3B6B7;
+    display: grid; 
+    grid-template-columns: 70% 30%; 
+    grid-template-rows: min-content min-content; 
+    grid-template-areas: 
+    "media logofooter"
+    "contacto logofooter";
+}
+
+    .socialMedia {
+        grid-area: media;
+        justify-self: center;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+        .socialMedia h3 {
+            font-size: 1.5rem;
+        }
+
+        .socialMedia a {
+            color: black;
+            font-size: 1rem;
+            margin: 0.75rem;
+        }
+
+    .contacto {
+        grid-area: contacto;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .contacto h3 {
+        font-size: 1.5rem;
+    }
+
+    .contacto ul li {
+        list-style-type: none;
+        font-size: 0.75rem;
+    }
+
+    .logoFooter {
+        grid-area: logofooter;
+        width: 5rem;
+        justify-self: center;
+        align-self: center;
+    }
+
+/* PÁGINA DE UBICACIÓN */
+.local {
+    width: 95%;
+    display: block;
+    margin: 1.25rem auto;
+}
+
+.iframe {
+    text-align: center;
+    margin: 1rem;
+}
+
+    iframe {
+        width: 20rem;
+    }
+
+/* PÁGINA DE CONTACTO */
+.formulario {
+    grid-area: main;
+}
+
+    .form {
+        width: 22rem;
+        min-height: 30rem;
+        border: 1px solid black;
+        border-radius: 0.75rem;
+        box-shadow: 0.25rem 0.20rem 0.5rem;
+        background-color: white;
+        margin: 2rem auto;
+        display: grid;
+    }
+
+        .formTitle {
+            text-align: center;
+            font-size: 2.25rem;
+            align-self: center;
+        }
+
+        .formInput {
+            font-size: 1.5rem;
+            border: 1px solid black;
+            border-radius: 0.75rem;
+            outline: none;
+            padding: 0.5rem;
+            margin: 0.5rem;
+        }
+
+        .formTextArea {
+            font-size: 1.5rem;
+            border: 1px solid black;
+            border-radius: 0.75rem;
+            outline: none;
+            resize: none;
+            padding: 0.5rem;
+            margin: 0.5rem;
+        }
+
+        .formButton {
+            font-family: inherit;
+            font-size: 1.5rem;
+            background-color: #3498DB;
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            margin: 0.5rem;
+        }
+
+/* MEDIA */
+@media screen and (min-width: 600px){
+    header {
+        grid-template-columns: 20% auto 20%;
+        grid-template-areas: 
+        "logo titulo titulo"
+        "logo nav nav";
+    }
+
+    .logo {
+        display: block;
+    }
+    
+    .logo img {
+        width: 6.5rem;
+        margin: 0.25rem;
+    }    
+
+    .nombreEmpresa h1 {
+        font-size: 3rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .sectorGaleria img {
+        width: 10rem;
+    }
+
+    .logoFooter {
+        width: 6.5rem;
+    }
+
+/* PÁGINA DE UBICACIÓN */
+    iframe {
+        width: 30rem;
+    }
+
+/* PÁGINA DE CONTACTO */
+    .form {
+        width: 30rem;
+    }
+
+        .formTitle {
+            font-size: 3rem;
+        }
+
+        .formInput {
+            font-size: 2rem;
+        }
+
+        .formTextArea {
+            font-size: 2rem;
+        }
+
+        .formButton {
+            font-size: 2rem;
+        }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        grid-template-areas: 
+        "logo titulo ..."
+        "logo nav ...";
+    }
+
+    .nombreEmpresa h1 {
+        font-size: 3.5rem;
+    }
+
+    nav a {
+        font-size: 1.25rem;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    .sectorGaleria img {
+        width: 15rem;
+    }
+
+    footer {
+        grid-template-columns: 20% auto 20%; 
+        grid-template-rows: min-content;
+        grid-template-areas: 
+        "media contacto logofooter";
+        padding-top: 0.5rem;
+    }
+
+    .socialMedia {
+        margin-bottom: 0;
+    }
+
+    .socialMedia a {
+        display: block;
+        font-size: 1.10rem;
+        margin: 0.5rem 0;
+    }
+
+    .contacto {
+        margin-bottom: 0;
+    }
+
+    .contacto ul li {
+        font-size: 1.10rem;
+        margin: 0.25rem 0;
+    }
+
+    .logoFooter {
+        justify-self: end;
+        margin: 0.25rem;
+    }
+}
