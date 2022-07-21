@@ -153,6 +153,7 @@ footer {
 /* PÁGINA DE CONTACTO */
 .formulario {
     grid-area: main;
+    background: linear-gradient(to bottom, #f2994a, #f2c94c);
 }
 
     .form {
@@ -276,6 +277,7 @@ footer {
 
     nav a {
         font-size: 1.25rem;
+        transition: all 0.45s;
     }
 
     nav a:hover {
