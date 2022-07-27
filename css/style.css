@@ -64,6 +64,8 @@ footer {
 
         .socialMedia a {
             font-size: 0.75rem;
+            text-decoration: none;
+            color: black;
         }
 
     .contacto {
@@ -171,7 +173,7 @@ footer {
 }
 
 @media screen and (min-width: 600px){
-    .nombreEmpresa h1 {
+    .nombreEmpresa {
         font-size: 2.5rem;
     }
 
